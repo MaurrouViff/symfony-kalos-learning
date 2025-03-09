@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'inscrire - KALOS{% endblock %}
+
+{% block body %}
+    <div class="min-h-screen flex items-center justify-center text-white bg-cover bg-center"
+         style="background-image: url('{{ asset('images/image-background/sainte-jeanne-d-arc.png') }}');">
+
+        <div class="w-full max-w-md bg-white/80 outline-2 outline-offset-0 outline-black p-6 rounded-lg shadow-lg text-black">
+            <h1 class="text-2xl font-semibold text-center mb-4">S'enregistrer</h1>
+            <a href="{{ path('app_home') }}" class="text-sm font-semibold mb-4 mt-4 text-black"><i class="fa-solid fa-arrow-left"></i> Retour vers l'accueil</a>
+
+            {{ form_errors(registrationForm) }}
+
+            {{ form_start(registrationForm, { attr: { class: 'space-y-4' } }) }}
+
+            <div>
+                {{ form_label(registrationForm.email, 'Email', { label_attr: { class: 'block text-black' } }) }}
+                {{ form_widget(registrationForm.email, { attr: { class: 'w-full px-4 py-2 rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black' } }) }}
+                {{ form_errors(registrationForm.email) }}
+            </div>
+
+            <div>
+                {{ form_label(registrationForm.prenom, 'Prénom', { label_attr: { class: 'block text-black' } }) }}
+                {{ form_widget(registrationForm.prenom, { attr: { class: 'w-full px-4 py-2 rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black' } }) }}
+                {{ form_errors(registrationForm.prenom) }}
+            </div>
+
+            <div>
+                {{ form_label(registrationForm.nom, 'Nom', { label_attr: { class: 'block text-black' } }) }}
+                {{ form_widget(registrationForm.nom, { attr: { class: 'w-full px-4 py-2 rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black' } }) }}
+                {{ form_errors(registrationForm.nom) }}
+            </div>
+
+            <div>
+                {{ form_label(registrationForm.plainPassword, 'Mot de passe', { label_attr: { class: 'block text-black' } }) }}
+                {{ form_widget(registrationForm.plainPassword, { attr: { class: 'w-full px-4 py-2 rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black' } }) }}
+                {{ form_errors(registrationForm.plainPassword) }}
+            </div>
+
+            <div class="flex items-center">
+                {{ form_widget(registrationForm.agreeTerms, { attr: { class: 'mr-2 w-4 h-4' } }) }}
+                {{ form_label(registrationForm.agreeTerms, null, { label_attr: { class: 'text-black' } }) }}
+                {{ form_errors(registrationForm.agreeTerms) }}
+            </div>
+
+            <div class="flex items-center">
+                <p class="lg:text-base text-sm">Déjà un compte ? <a href="{{ path('app_login') }}" class="text-red-500 hover:underline">Connectez-vous</a></p>
+            </div>
+
+            <button type="submit" class="w-full bg-gray-500/80 hover:bg-gray-900 cursor-pointer text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-black">
+                Confirmer
+            </button>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+{% endblock %}
