@@ -5,7 +5,34 @@
 {% block body %}
 {% include ('partials/header.html.twig') %}
     <div class="grow">
-
+        <section class="flex items-center justify-center min-h-[450px] bg-cover bg-center" style="background-image: url('{{ asset('images/image-background/kalos-bannière.jpg') }}')"></section>
+        <section class="min-h-[100px] flex justify-center mt-3.5">
+            <div class="flex flex-col items-center">
+                <div class="gothic-font bg-clip-text lg:tracking-widest sm:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-5xl sm:text-3xl text-xl">
+                    Atelier Français
+                </div>
+                <div class="gothic-font bg-clip-text lg:tracking-widest sm:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-5xl sm:text-3xl text-xl">
+                    Qualité · Beauté · Valeurs
+                </div>
+            </div>
+        </section>
+        <section class="min-h-[450px] flex items-center justify-center bg-cover bg-center lg:m-16 md:m-8 m-0 mb-6" style="background-image: url('{{ asset('images/image-background/Kalos-joaillerie2.jpg') }}')"></section>
+        <div class="flex items-center flex-col -mt-6">
+            <div class="gothic-font bg-clip-text lg:tracking-widest sm:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-5xl sm:text-3xl text-xl">
+                Découvrez nos chevalières,
+            </div>
+            <div class="gothic-font bg-clip-text lg:tracking-widest sm:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-5xl sm:text-3xl text-xl">
+                Et autres bijoux à la gloire de France !
+            </div>
+        </div>
+        <section class="min-h-[500px] flex items-center justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-4 md:gap-2 gap-1 w-full">
+                <img src="{{ asset('images/image-background/napoelon-bague-backgrounf.jpg') }}" alt="Image de chevalières" class="w-full h-[300px] object-cover">
+                <img src="{{ asset('images/image-background/bouton vetement v3 new co.jpg') }}" alt="Image de vêtements" class="w-full h-[300px] object-cover">
+                <img src="{{ asset('images/image-background/Collier v2.jpg') }}" alt="Image de colliers" class="w-full h-[300px] object-cover">
+                <img src="{{ asset('images/image-background/bracelet-accueil.jpg') }}" alt="Image de bracelets" class="w-full h-[300px] object-cover">
+            </div>
+        </section>
     </div>
 {% include ('partials/footer.html.twig') %}
 {% endblock %}

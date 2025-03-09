@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+body {
+    font-family: Poppings, sans-serif;
+}
+
+@font-face {
+    font-family: 'Blackletter';
+    src: url('Blacklettersh.ttf') format('truetype');
+}
+
+@layer utilities {
+    .gothic-font {
+        font-family: 'Blackletter', sans-serif;
+    }
+}

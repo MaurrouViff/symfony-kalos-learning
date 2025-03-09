@@ -1,27 +1,28 @@
 <header>
     <nav class="flex items-center justify-center min-h-16 bg-gradient-to-r from-blue-500 via-white to-red-500">
-        <ul class="flex items-center justify-between lg:gap-4 gap-2">
+        <ul class="flex items-center justify-between lg:gap-4 md:gap-2 gap-1">
             <li>
-                <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Accueil</a>
+                <a href="{{ path('app_home') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Accueil</a>
             </li>
             <li>
-                <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Contact</a>
+                <a href="{{ path('app_contact') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Contact</a>
             </li>
             <li>
-                <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Magasin</a>
+                <a href="{{ path('app_magasin') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Magasin</a>
             </li>
-            {% if app is defined and app.user %}
+            {% if app.user is defined and app.user %}
                 <li>
-                    <a href="" class="">Panier</a>
+                    <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Panier</a>
                 </li>
                 <li>
-                    <a href="" class="">Mon Compte</a>
+                    <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Mon Compte</a>
                 </li>
                 {% else %}
                 <li>
-                    <a href="" class="">Connexion</a>
+                    <a href="{{ path('app_login') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Connexion</a>
                 </li>
             {% endif %}
         </ul>
     </nav>
+    <hr class="h-1.5 bg-cyan-300 border-0">
 </header>
