@@ -9,7 +9,7 @@
 
         <div class="w-full max-w-md bg-white/80 outline-2  outline-offset-0 outline-black p-6 rounded-lg shadow-lg text-black">
             {% if error %}
-                <div class="bg-black/80 text-white text-sm p-2 rounded mb-4">
+                <div class="bg-black/80  text-white text-sm p-2 rounded mb-4">
                     {{ error.messageKey|trans(error.messageData, 'security') }}
                 </div>
             {% endif %}
