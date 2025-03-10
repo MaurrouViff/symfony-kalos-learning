@@ -12,10 +12,10 @@
             </li>
             {% if app.user is defined and app.user %}
                 <li>
-                    <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Panier</a>
+                    <a href="{{ path('app_panier') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Panier</a>
                 </li>
                 <li>
-                    <a href="" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Mon Compte</a>
+                    <a href="{{ path('app_account') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Mon Compte</a>
                 </li>
                 {% else %}
                 <li>
