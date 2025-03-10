@@ -1,9 +1,54 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact - KALOS{% endblock %}
 
 {% block body %}
-<div class="gothic-font">
-    Test
-</div>
+    {% include ('partials/header.html.twig') %}
+    <section class="flex items-center justify-center flex-col h-screen">
+        <div class="gothic-font bg-clip-text lg:tracking-widest sm:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-3xl sm:text-xl text-base">
+            Contact
+        </div>
+        <div class="flex items-center justify-center mt-16">
+            Une question ? Vous pouvez nous contacter en remplissant le formulaire ci-dessous et nous vous
+        </div>
+        <div class="flex items-center justify-center">
+            répondrons en 24 à 48h du lundi au vendredi.
+        </div>
+        <div class="flex items-center justify-center mt-16">
+            Vous pouvez également nous joindre par téléphone du mardi au jeudi de 16h30 à 18h30 et le
+        </div>
+        <div class="flex items-center justify-center">
+            vendredi de 15h30 à 17h30 au : <span class="font-bold ml-1">04 65 84 94 64</span>
+        </div>
+    </section>
+    <div class="flex items-center justify-center min-h-[600px]">
+        {{ form_errors(contactForm) }}
+
+        {{ form_start(contactForm, { attr: { class: 'space-y-4' }} ) }}
+
+        <div>
+            {{ form_label(contactForm.nom, 'Votre nom', { label_attr: { class: 'block text-black'} }) }}
+            {{ form_widget(contactForm.nom, {attr: { class: 'w-full px-8 py-4 rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black'}}) }}
+            {{ form_errors(contactForm.nom) }}
+        </div>
+
+        <div>
+            {{ form_label(contactForm.topic, 'Votre raison', { label_attr: { class: 'block text-black'} }) }}
+            {{ form_widget(contactForm.topic, { attr: { class: 'w-full px-8 py-4 rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black'} }) }}
+            {{ form_errors(contactForm.topic) }}
+        </div>
+
+        <div>
+            {{ form_label(contactForm.text, 'Votre texte', { label_attr: { class: 'block text-black'} }) }}
+            {{ form_widget(contactForm.text, { attr: { class: 'w-[400px] h-[200px] rounded bg-gray-300/80 text-black focus:outline-none focus:ring-2 focus:ring-black'} }) }}
+            {{ form_errors(contactForm.text) }}
+        </div>
+
+        <button type="submit" class="w-full bg-gray-500 hover:bg-gray-900 cursor-pointer text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-black">
+            Envoyer
+        </button>
+
+        {{ form_end(contactForm) }}
+    </div>
+    {% include ('partials/footer.html.twig') %}
 {% endblock %}
