@@ -1,0 +1,21 @@
+form:
+  current_password:
+    label: "Mot de passe actuel"
+    blank: "Veuillez entrer votre mot de passe actuel."
+    invalid: "Le mot de passe actuel est invalide."
+
+  new_password:
+    label: "Nouveau mot de passe"
+    blank: "Veuillez entrer un nouveau mot de passe."
+    password:
+      min_length: "Votre mot de passe doit contenir au moins 6 caractères."
+      max_length: "Votre mot de passe ne peut pas dépasser 255 caractères."
+
+  confirm_password:
+    label: "Confirmer le mot de passe"
+    blank: "Veuillez confirmer votre mot de passe."
+    invalid: "Les mots de passe ne correspondent pas."
+
+  submit: "Confirmer"
+  success: "Le mot de passe a été modifié avec succès."
+  error: "Une erreur est survenue lors de la modification du mot de passe."
