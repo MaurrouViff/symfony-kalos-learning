@@ -1,11 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MagasinController!{% endblock %}
+{% block title %}Magasin - KALOS{% endblock %}
 
 {% block body %}
 {% include ('partials/header.html.twig') %}
     <div class="grow">
-
+        <section class="flex items-center justify-center flex-col min-h-screen bg-gray-200">
+            <h2 class="mb-8 bg-gradient-to-r from-emerald-500 to-orange-300 bg-clip-text text-transparent lg:text-4xl md:text-2xl text-lg">Magasin</h2>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-2 gap-1">
+                <a href="" class="block">
+                    <img src="{{ asset('images/image-background/bracelet-accueil.jpg') }}" alt="Image de bracelet or" class="object-cover h-[300px] w-full">
+                </a>
+                <a href="" class="block">
+                    <img src="{{ asset('images/image-background/napoelon-bague-backgrounf.jpg') }}" alt="Image de bague or" class="object-cover h-[300px] w-full">
+                </a>
+                <a href="" class="block">
+                    <img src="{{ asset('images/image-background/bouton vetement v3 new co.jpg') }}" alt="Image de vêtements" class="object-cover h-[300px] w-full">
+                </a>
+                <a href="" class="block">
+                    <img src="{{ asset('images/image-background/Collier v2.jpg') }}" alt="Image de collier" class="object-cover h-[300px] w-full">
+                </a>
+            </div>
+        </section>
     </div>
 {% include ('partials/footer.html.twig') %}
 {% endblock %}

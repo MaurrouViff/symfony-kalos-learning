@@ -5,7 +5,33 @@
 {% block body %}
 {% include ('partials/header.html.twig') %}
     <div class="grow">
-
+        <section class="flex items-center justify-center min-h-[300px] flex-col bg-gray-200">
+            <div class="mb-3.5">
+                <h2 class="bg-gradient-to-r from-fuchsia-400 to-indigo-400 bg-clip-text text-transparent  lg:text-3xl md:text-xl text-lg">Vos informations : </h2>
+            </div>
+            <div class="lg:space-y-3 space-y-2">
+                <div>
+                    <p class="text-red-400 font-semibold">Votre email : <span class="bg-gradient-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent lg:text-lg text-base">{{ app.user.userIdentifier }}</span></p>
+                </div>
+                <div>
+                    <p class="text-red-400 font-semibold">Votre nom : <span class="bg-gradient-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent lg:text-lg text-base">{{ app.user.nom }}</span></p>
+                </div>
+                <div>
+                    <p class="text-red-400 font-semibold">Votre prénom : <span class="bg-gradient-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent lg:text-lg text-base">{{ app.user.prenom }}</span></p>
+                </div>
+            </div>
+        </section>
+        <hr class="bg-cyan-300 h-1.5 border-0">
+        <section class="flex items-center justify-center min-h-[300px] flex-col bg-gray-200">
+            <div>
+                <h2>Options :</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 gap-2">
+                <div>
+                    <a href="{{ path('app_update_password') }}">Changer le mot de passe</a>
+                </div>
+            </div>
+        </section>
     </div>
 {% include ('partials/footer.html.twig') %}
 {% endblock %}
