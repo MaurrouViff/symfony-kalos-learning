@@ -45,4 +45,12 @@ final class AccountManagerController extends AbstractController
             'formUpdatePassword' => $form->createView(),
         ]);
     }
+
+    #[Route('/photo-changer', name: 'app_photo_changer')]
+    public function changePhoto(): Response {
+
+        return $this->render('photo_changer/index.html.twig', [
+            'controller_name' => 'AccountManagerController',
+        ]);
+    }
 }
