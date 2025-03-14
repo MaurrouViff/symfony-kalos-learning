@@ -33,6 +33,22 @@
                 <img src="{{ asset('images/image-background/bracelet-accueil.jpg') }}" alt="Image de bracelets" class="w-full h-[300px] object-cover">
             </div>
         </section>
+        <section class="min-h-[500px] flex items-center justify-center mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <img src="{{ asset('images/image-background/Kalos kagathos.jpg') }}" alt="Image 1 de kalos" class="w-full h-full object-cover">
+                <img src="{{ asset('images/image-background/ton_heritage.jpg') }}" alt="Image 2 de kalos" class="w-full h-full object-cover">
+                <img src="{{ asset('images/image-background/héritage.jpg') }}" alt="Image 3 de kalos" class="md:col-span-2 lg:col-span-1 w-full h-full object-cover">
+            </div>
+        </section>
+        <section class="min-h-[500px] flex flex-col items-center justify-center mt-4 bg-center bg-cover" style="background-image: url('{{ asset('images/image-background/bg-footer-kalos.png') }}')">
+            <h2 class="font-bold text-white lg:text-3xl md:text-2xl text-xl md:tracking-widest tracking-wider mb-8">KALOS ?</h2>
+            <p class="text-white lg:text-base md:text-sm text-xs">Créateur de vêtements, bijoux et accessoires de qualité, aux valeurs fortes et aux références fines,</p>
+            <p class="text-white lg:text-base md:text-sm text-xs lg:mt-4 md:mt-3 mt-2">Notre nom KALOS caractérise nos créations, il provient de l'expression Kalos Kagathos, utilisée en grec ancien pour</p>
+            <p class="text-white lg:text-base md:text-sm text-xs">définir l’idéal d’une personnalité complète, harmonieuse de corps et d’esprit, compétente au combat comme en</p>
+            <p class="text-white lg:text-base md:text-sm text-xs">paroles, dans l’intellect comme dans l’action.</p>
+            <p class="text-white lg:text-base md:text-sm text-xs lg:mt-4 md:mt-3 mt-2">KALOS met également ses valeurs au cœur de sa production, pour en savoir plus sur nous, nos valeurs, motivations,</p>
+            <p class="text-white lg:text-base md:text-sm text-xs">processus et produits cliquez sur le bouton "Qui sommes-nous".</p>
+        </section>
     </div>
 {% include ('partials/footer.html.twig') %}
 {% endblock %}
