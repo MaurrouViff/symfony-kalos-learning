@@ -15,4 +15,10 @@ final class MagasinController extends AbstractController
             'controller_name' => 'MagasinController',
         ]);
     }
+    #[Route('/article', name: 'app_article')]
+    public function showArticle(): Response {
+        return $this->render('magasin/article.html.twig', [
+            'controller_name' => 'MagasinController',
+        ]);
+    }
 }

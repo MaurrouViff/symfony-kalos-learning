@@ -5,34 +5,41 @@
 {% block body %}
 {% include ('partials/header.html.twig') %}
     <div class="grow">
-        <section class="flex items-center justify-center min-h-[300px] flex-col bg-gray-200">
-            <div class="mb-3.5">
-                <h2 class="bg-gradient-to-r from-fuchsia-400 to-indigo-400 bg-clip-text text-transparent  lg:text-3xl md:text-xl text-lg">Vos informations : </h2>
-            </div>
-            <div class="lg:space-y-3 space-y-2">
-                <div>
-                    <p class="text-red-400 font-semibold">Votre email : <span class="bg-gradient-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent lg:text-lg text-base">{{ app.user.userIdentifier }}</span></p>
-                </div>
-                <div>
-                    <p class="text-red-400 font-semibold">Votre nom : <span class="bg-gradient-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent lg:text-lg text-base">{{ app.user.nom }}</span></p>
-                </div>
-                <div>
-                    <p class="text-red-400 font-semibold">Votre prénom : <span class="bg-gradient-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent lg:text-lg text-base">{{ app.user.prenom }}</span></p>
-                </div>
-            </div>
+        <section class="flex items-center justify-center min-h-[300px] flex-col">
+            <table class="w-44 border border-black text-black">
+                <thead>
+                <tr class="bg-black/80 text-white">
+                    <th colspan="2" class="px-4 py-2 border border-white">Vos informations</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="bg-gray-100">
+                    <td class="px-4 py-2 border border-black">Votre nom</td>
+                    <td class="px-4 py-2 border border-black">{{ app.user.nom }}</td>
+                </tr>
+                <tr class="bg-gray-100">
+                    <td class="px-4 py-2 border border-black">Votre prénom</td>
+                    <td class="px-4 py-2 border border-black">{{ app.user.prenom }}</td>
+                </tr>
+                <tr class="bg-gray-100">
+                    <td class="px-4 py-2 border border-black">Votre email</td>
+                    <td class="px-4 py-2 border border-black">{{ app.user.userIdentifier }}</td>
+                </tr>
+                </tbody>
+            </table>
         </section>
         <hr class="bg-cyan-300 h-1.5 border-0">
-        <section class="flex items-center justify-center min-h-[300px] flex-col bg-gray-200">
+        <section class="flex items-center justify-center min-h-[300px] flex-col">
             <h2 class="font-semibold lg:text-xl md:text-lg text-base">Options :</h2>
             <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-2">
-                <a href="{{ path('app_update_password') }}" class="text-center rounded-md bg-gradient-to-r from-red-400 via-white to-blue-400 hover:from-red-600 hover:via-gray-200 hover:to-blue-600 transition-all duration-500 ease-in-out lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2">
-                    Changer le mot de passe
+                <a href="{{ path('app_update_password') }}" class="text-center lg:px-4 lg:py-2 md:px-3 md:py-1.5 px-2.5 py-1 rounded-md bg-white outline-2 outline-offset-0 outline-black">
+                    Mot de passe
                 </a>
                 <a href="{{ path('app_panier') }}" class="text-center rounded-md bg-gradient-to-r from-red-400 via-white to-blue-400 hover:from-red-600 hover:via-gray-200 hover:to-blue-600 transition-all duration-500 ease-in-out lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2">
-                    Voir votre panier
+                    Panier
                 </a>
                 <a href="{{ path('app_photo_changer') }}" class="text-center rounded-md bg-gradient-to-r from-red-400 via-white to-blue-400 hover:from-red-600 hover:via-gray-200 hover:to-blue-600 transition-all duration-500 ease-in-out lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2">
-                    Changer votre photo
+                    Photo
                 </a>
             </div>
         </section>
