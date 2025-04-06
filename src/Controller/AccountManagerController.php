@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Form\ChangePhotoType;
 use App\Form\UpdatePasswordType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class AccountManagerController extends AbstractController
 {
-    #[Route('/change-password', name: 'app_update_password')]
+    #[Route('/mon-compte/change-password', name: 'app_update_password')]
     public function changePassword(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
     {
         $user = $this->getUser();
@@ -46,11 +47,24 @@ final class AccountManagerController extends AbstractController
         ]);
     }
 
-    #[Route('/photo-changer', name: 'app_photo_changer')]
-    public function changePhoto(): Response {
+    #[Route('/mon-compte/photo-changer', name: 'app_photo_changer')]
+    public function changePhoto(Request $request, EntityManagerInterface $entityManager): Response {
+        $user = $this->getUser();
+
+        if (!$user) {
+            return $this->redirectToRoute('app_login');
+        }
+
+        $form = $this->createForm(ChangePhotoType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+        }
 
         return $this->render('photo_changer/index.html.twig', [
             'controller_name' => 'AccountManagerController',
+            'formUpdatePhoto' => $form->createView(),
         ]);
     }
 }

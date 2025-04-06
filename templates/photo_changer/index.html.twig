@@ -3,9 +3,11 @@
 {% block title %}Photo - KALOS{% endblock %}
 
 {% block body %}
-<section class="flex items-center justify-center min-h-screen bg-center bg-cover" style="background-image: url('{{ asset('images/image-background/saint-jeanne.png') }}')">
-    <div class="">
+    {% include ('partials/header.html.twig') %}
+    <div class="grow">
+        <section class="flex items-center justify-center min-h-screen bg-center bg-cover" style="background-image: url('{{ asset('images/image-background/saint-jeanne.png') }}')">
 
+        </section>
     </div>
-</section>
+    {% include ('partials/footer.html.twig') %}
 {% endblock %}
