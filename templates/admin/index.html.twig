@@ -1,12 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Panel Admin{% endblock %}
+{% block title %}Panel Admin - KALOS{% endblock %}
 
 {% block body %}
 {% include ('partials/header.html.twig') %}
     <div class="grow">
-        <section class="flex items-center justify-center">
-
+        <section class="flex items-center justify-center min-h-28">
+            <h2 class="gothic-font bg-clip-text text-transparent font-extrabold lg:tracking-widest md:tracking-wider sm:tracking-wide tracking-tighter bg-black lg:text-4xl md:text-3xl sm:text-2xl text-xl">Bienvenue sur le panel admin</h2>
+        </section>
+        <hr class="h-1.5 border-0 bg-cyan-300">
+        <section class="flex items-center justify-center min-h-[100px]">
+            <h2 class="text-red-500 font-bold lg:text-xl md:text-lg text-base">Options :</h2>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-3.5 md:gap-2.5 gap-1.5">
+                <a href="#" class="text-center rounded lg:py-2 lg:px-4 md:py-1.5 md:px-3.5 py-1 px-3 outline-2 outline-offset-0 outline-red-500 text-red-500">Rôles</a>
+                <a href="#" class="text-center rounded lg:py-2 lg:px-4 md:py-1.5 md:px-3.5 py-1 px-3 outline-2 outline-offset-0 outline-red-500 text-red-500">Produits</a>
+                <a href="#" class="text-center rounded lg:py-2 lg:px-4 md:py-1.5 md:px-3.5 py-1 px-3 outline-2 outline-offset-0 outline-red-500 text-red-500">Comptes</a>
+                <a href="#" class="text-center rounded lg:py-2 lg:px-4 md:py-1.5 md:px-3.5 py-1 px-3 outline-2 outline-offset-0 outline-red-500 text-red-500">Conversations</a>
+            </div>
         </section>
     </div>
 {% include ('partials/footer.html.twig') %}
