@@ -26,7 +26,9 @@ class ContactType extends AbstractType
             ->add('topic', TextType::class, [
                 'required' => true,
                 'constraints' => [
-                    new NotBlank(),
+                    new NotBlank([
+                        'message' => "Votre message est vide"
+                    ]),
                     new Length([
                         'min' => 5,
                         'minMessage' => 'Minimum of 5 characters',
@@ -41,7 +43,9 @@ class ContactType extends AbstractType
             ->add('nom',  TextType::class, [
                 'required' => true,
                 'constraints' => [
-                    new NotBlank(),
+                    new NotBlank([
+                        'message' => 'Votre nom n\'est pas vide'
+                    ]),
                     new Length([
                         'min' => 5,
                         'minMessage' => 'Minimum of 5 characters',

@@ -29,19 +29,27 @@
             </table>
         </section>
         <hr class="bg-cyan-300 h-1.5 border-0">
-        <section class="flex items-center justify-center min-h-[300px] flex-col">
+        <section class="flex items-center justify-center min-h-[100px] flex-col">
             <h2 class="font-semibold lg:text-xl md:text-lg text-base">Options :</h2>
             <div class="grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-2">
-                <a href="{{ path('app_update_password') }}" class="text-center lg:px-4 lg:py-2 md:px-3 md:py-1.5 px-2.5 py-1 rounded-md bg-white outline-2 outline-offset-0 outline-black">
+                <a href="{{ path('app_update_password') }}" class="text-center lg:px-4 lg:py-2 md:px-3 md:py-1.5 px-2.5 py-1 rounded-md bg-white outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white ease-in-out duration-300">
                     Mot de passe
                 </a>
-                <a href="{{ path('app_panier') }}" class="text-center rounded-md bg-gradient-to-r from-red-400 via-white to-blue-400 hover:from-red-600 hover:via-gray-200 hover:to-blue-600 transition-all duration-500 ease-in-out lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2">
+                <a href="{{ path('app_panier') }}" class="text-center lg:px-4 lg:py-2 md:px-3 md:py-1.5 px-2.5 py-1 rounded-md bg-white outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white ease-in-out duration-300">
                     Panier
                 </a>
-                <a href="{{ path('app_photo_changer') }}" class="text-center rounded-md bg-gradient-to-r from-red-400 via-white to-blue-400 hover:from-red-600 hover:via-gray-200 hover:to-blue-600 transition-all duration-500 ease-in-out lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2">
+                <a href="{{ path('app_photo_changer') }}" class="text-center lg:px-4 lg:py-2 md:px-3 md:py-1.5 px-2.5 py-1 rounded-md bg-white outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white ease-in-out duration-300">
                     Photo
                 </a>
             </div>
+        </section>
+        <section class="flex items-center flex-col lg:space-y-3 md:space-y-2 space-y-1 justify-center min-h-[100px]">
+            <a href="{{ path('app_logout') }}" class="rounded text-red-500 lg:py-2 lg:px-4 md:py-1.5 md:px-3 px-2.5 py-1 bg-white outline-2 outline-offset-0 outline-red-500">
+                Se déconnecter
+            </a>
+            <a href="{{ path('app_admin') }}" class="rounded text-emerald-500 lg:py-2 lg:px-4 md:py-1.5 md:px-3 px-2.5 py-1 bg-white outline-2 outline-offset-0 outline-emerald-500">
+                Panel Admin
+            </a>
         </section>
     </div>
 {% include ('partials/footer.html.twig') %}

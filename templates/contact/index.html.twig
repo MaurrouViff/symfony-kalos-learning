@@ -5,16 +5,16 @@
 {% block body %}
     {% include ('partials/header.html.twig') %}
     <section class="flex items-center justify-center flex-col h-screen">
-        <div class="gothic-font bg-clip-text lg:tracking-widest sm:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-3xl sm:text-xl text-base">
+        <div class="gothic-font bg-clip-text lg:tracking-widest md:tracking-wider tracking-wide bg-black font-extrabold text-transparent lg:text-3xl md:text-xl sm:text-lg text-base">
             Contact
         </div>
-        <div class="flex items-center justify-center mt-16">
+        <div class="flex items-center justify-center mt-10">
             Une question ? Vous pouvez nous contacter en remplissant le formulaire ci-dessous et nous vous
         </div>
         <div class="flex items-center justify-center">
             répondrons en 24 à 48h du lundi au vendredi.
         </div>
-        <div class="flex items-center justify-center mt-16">
+        <div class="flex items-center justify-center mt-10">
             Vous pouvez également nous joindre par téléphone du mardi au jeudi de 16h30 à 18h30 et le
         </div>
         <div class="flex items-center justify-center">
@@ -22,9 +22,10 @@
         </div>
     </section>
     <div class="flex items-center justify-center min-h-[600px]">
+
         {{ form_errors(contactForm) }}
 
-        {{ form_start(contactForm, { attr: { class: 'space-y-4' }} ) }}
+        {{ form_start(contactForm, { attr: { class: 'lg:space-y-4 md:space-y-3 space-y-2' }} ) }}
 
         <div>
             {{ form_label(contactForm.nom, 'Votre nom', { label_attr: { class: 'block text-black'} }) }}

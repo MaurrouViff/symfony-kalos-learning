@@ -2,24 +2,24 @@
     <nav class="flex items-center justify-center min-h-16 bg-gradient-to-r from-blue-500 via-white to-red-500">
         <ul class="flex items-center justify-between lg:gap-4 md:gap-2 gap-1">
             <li>
-                <a href="{{ path('app_home') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Accueil</a>
+                <a href="{{ path('app_home') }}" class="rounded-md bg-white lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Accueil</a>
             </li>
             <li>
-                <a href="{{ path('app_contact') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Contact</a>
+                <a href="{{ path('app_contact') }}" class="rounded-md bg-white lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Contact</a>
             </li>
             <li>
-                <a href="{{ path('app_magasin') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Magasin</a>
+                <a href="{{ path('app_magasin') }}" class="rounded-md bg-white lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Magasin</a>
             </li>
             {% if app.user is defined and app.user %}
                 <li>
-                    <a href="{{ path('app_panier') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Panier</a>
+                    <a href="{{ path('app_panier') }}" class="rounded-md bg-white lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Panier</a>
                 </li>
                 <li>
-                    <a href="{{ path('app_account') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Mon Compte</a>
+                    <a href="{{ path('app_account') }}" class="rounded-md bg-white lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Mon Compte</a>
                 </li>
                 {% else %}
                 <li>
-                    <a href="{{ path('app_login') }}" class="rounded-md bg-white lg:py-2 lg:px-4 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Connexion</a>
+                    <a href="{{ path('app_login') }}" class="rounded-md bg-white lg:py-2 lg:px-4 md:py-1.5 md:px-3 py-1 px-2 outline-2 outline-offset-0 outline-black hover:bg-black hover:text-white duration-300 ease-in-out">Connexion</a>
                 </li>
             {% endif %}
         </ul>

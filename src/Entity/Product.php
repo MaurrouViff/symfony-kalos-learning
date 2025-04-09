@@ -25,9 +25,6 @@ class Product
     #[ORM\Column]
     private ?float $price = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $category = null;
-
     #[ORM\Column(length: 4096)]
     private ?string $image = null;
 
@@ -36,6 +33,9 @@ class Product
      */
     #[ORM\ManyToMany(targetEntity: Panier::class, mappedBy: 'product')]
     private Collection $paniers;
+
+    #[ORM\ManyToOne(inversedBy: 'product')]
+    private ?ProductCategory $productCategory = null;
 
     public function __construct()
     {
@@ -83,18 +83,6 @@ class Product
         return $this;
     }
 
-    public function getCategory(): ?string
-    {
-        return $this->category;
-    }
-
-    public function setCategory(string $category): static
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
     public function getImage(): ?string
     {
         return $this->image;
@@ -130,6 +118,18 @@ class Product
         if ($this->paniers->removeElement($panier)) {
             $panier->removeProduct($this);
         }
+
+        return $this;
+    }
+
+    public function getProductCategory(): ?ProductCategory
+    {
+        return $this->productCategory;
+    }
+
+    public function setProductCategory(?ProductCategory $productCategory): static
+    {
+        $this->productCategory = $productCategory;
 
         return $this;
     }

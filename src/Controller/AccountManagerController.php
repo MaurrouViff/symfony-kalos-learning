@@ -14,8 +14,8 @@ use Symfony\Component\Routing\Attribute\Route;
 final class AccountManagerController extends AbstractController
 {
     #[Route('/mon-compte/change-password', name: 'app_update_password')]
-    public function changePassword(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
-    {
+    public function changePassword(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response {
+
         $user = $this->getUser();
 
         if (!$user) {
